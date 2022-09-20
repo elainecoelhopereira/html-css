@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form> <!--container de inputs-->
+        <div>
+            <!--Rótulo do campo (dá um nome)-->
+              <label for="campoNome">Nome completo</label><br/>
+              <!--campo de entrada de dados-->
+              <!-- placeholder = dica para usuário-->
+              <!--required = obrigatório-->
+              <!-- for se vincula ao id do input-->
+              <input id="campoNome" name="campoNome" type="texto" placeholder="Seu nome" required/>
+        </div>
+        <div>
+           <label for="campoEmail">Email</label><br/>
+           <input id="campoEmail" name="campoEmail" type="email"
+           placeholder="usuario@exemplo.com" required/>
+        </div>
+        <div>
+            <label for="campoSenha">Senha</label><br/>
+            <input id="campoSenha" name="campoSenha" type="password"
+            placeholder="Sua senha" minlength="8" required/>
+        </div>
+        <div>
+            <label for="campoProfissao">Profissão</label><br/>
+            <!--caixa de seleção c/ várias opções -->
+            <select id="campoProfissao" name="campoProfissao" required> <!--required selecione valor proprio-->
+                <option selected disabled value="">Selecione uma opção</option>
+                <option value="professor">Professor</option>
+                <option value="técnico">Técnico</option>
+                <option value="especialista" >Especialista</option>
+                <option value="nda" >Nenhuma das anteriores</option>
+            </select>
+        </div>
+        <div>
+             <label>Idioma nativo</label><br>
+
+             <input id="checkIngles" name="campoIdioma" type="radio" 
+             value="ingles"/>
+             <label for="checkIngles">Inglês</label>
+
+             <input id="checkEspanhol" name="campoIdioma" type="radio"
+             value="espanhol"/>
+             <label for="checkEspanhol">Espanhol</label>
+
+             <input id="checkPortuguês" name="campoIdioma" type="radio"
+             value="portugês"/>
+             <label for="checkPortugês">Português</label>
+        </div>
+        <div>
+             <label for="campoResumo">Fale sobre você</label><br/>
+            <textarea id="campoResumo" name="campoResumo" minlength="30" 
+            maxlength="123" rows="5" cols="30" placeholder="Descreva sua vida profissional" required></textarea>
+            <!--minlength="30" maxlength="123" quantidade de caracteres-->
+            <!--tam do quadrado rows="5" cols="30-->
+        </div>
+        <div>
+            <input id="checkTermos" type="checkbox" name="concordaTermo" required/>
+            <label for="checkTermos">Concordo com os termos do serviço</label>
+        </div>
+        <hr/>
+        <button>Enviar</button> <!--submeter (Submit)-->
+        <button type="reset">Limpar</button>
+        <button type="button" onclick="alert('Oie')">Outra ação</button>
+    </form>
+</body>
+</html>
